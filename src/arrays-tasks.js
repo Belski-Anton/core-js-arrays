@@ -201,8 +201,9 @@ function getHead(arr, n) {
  *    getTail([ 'a', 'b', 'c', 'd'], 3) => [ 'b', 'c', 'd' ]
  *    getTail([ 'a', 'b', 'c', 'd'], 0) => []
  */
-function getTail(/* arr, n */) {
-  throw new Error('Not implemented');
+function getTail(arr, n) {
+  if (n <= 0) return [];
+  return arr.slice(-n);
 }
 
 /**
@@ -248,8 +249,9 @@ function toStringList(arr) {
  *   distinct([ 1, 1, 2, 2, 3, 3, 4, 4]) => [ 1, 2, 3, 4]
  *   distinct([]) => []
  */
-function distinct(/* arr */) {
-  throw new Error('Not implemented');
+function distinct(arr) {
+  const uniqueArray = [...new Set(arr)];
+  return uniqueArray;
 }
 
 /**
